@@ -1,0 +1,21 @@
+<div class="row container app-form-container">
+  <div class="col-xs-6 col-md-4">
+    <input 
+      type="text" 
+      class="form-control" 
+      placeholder="username"
+      [(ngModel)]="username"
+    >
+    <p>{{ username }}</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      [disabled]="!username.length"
+      (click)="onResetClick()"
+    >
+      Reset username input
+    </button>
+  </div>
+</div>
