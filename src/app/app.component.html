@@ -1,0 +1,28 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onDisplayDetailsClick()"
+      >
+        Display details
+      </button>
+
+      <p 
+        class="mt-2"
+        *ngIf="isSecretDetailsVisible"
+      >
+        Secret details: password is '123456'
+      </p>
+
+      <p 
+        class="mt-2"
+        *ngFor="let click of buttonClicksList; let clickIndex = index"
+        [ngClass]="{ log: clickIndex >= 4 }"
+      >
+        {{ clickIndex + 1 }} - {{ click }}
+      </p>
+    </div>
+  </div>
+</div>
