@@ -1,5 +1,5 @@
 # Angular-The-Complete-Guide-Tasks
-2 - Practicing Databinding
+Task 2 - Practicing Databinding
 
 Task:
 1. Add a input field which updates a property ('username') via Two-Way-Binding
