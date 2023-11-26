@@ -1,0 +1,16 @@
+<div class="container mt-1">
+    <app-game-control 
+        (fireNumber)="onFireNumber($event)" 
+        (gameIsOver)="onGameIsOver($event)"
+    ></app-game-control>
+    <ng-container *ngIf="firedNumber">
+        <app-even 
+            *ngIf="firedNumber % 2 === 0; else appOdd" 
+            [evenNumber]="firedNumber"
+        ></app-even>
+        <ng-template #appOdd>
+            <app-odd [oddNumber]="firedNumber"></app-odd>
+        </ng-template>
+    </ng-container>
+</div>
+
